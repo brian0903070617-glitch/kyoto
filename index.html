@@ -275,6 +275,18 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
 </div>
 
 
+<h2 style="text-align:center;">行程表</h2>
+
+<!-- 城市選擇按鈕 -->
+<div style="text-align:center; margin-bottom:20px;">
+    
+    <button onclick="showCity('osaka1')">10/4 大阪</button>
+	<button onclick="showCity('osaka2')">10/5 大阪(day2)</button>
+	<button onclick="showCity('nara')">10/6 奈良,宇治</button>
+	<button onclick="showCity('kyoto')">10/7 京都</button>
+    
+</div>
+
 <script>
 function showCity(city) {
     document.querySelectorAll('.city-table').forEach(t => t.style.display='none');
