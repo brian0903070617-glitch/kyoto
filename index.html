@@ -3,22 +3,33 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>京都行程表</title>
+<title>行程表</title>
 <style>
-    body { font-family: Arial, sans-serif; padding: 20px; }
-    table { border-collapse: collapse; width: 100%; }
-    th, td { 
-        border: 1px solid #ccc; 
-        padding: 8px; 
-        text-align: center;     /* 水平置中 */
-        vertical-align: middle; /* 垂直置中 */
-    }
-    a { text-decoration: none; color: red; } /* 超連結文字紅色，不要底線 */
+body { font-family: Arial, sans-serif; padding: 20px; }
+table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+th, td { border: 1px solid #ccc; padding: 8px; text-align: center; vertical-align: middle; }
+a { text-decoration: none; color: red; } /* 超連結紅色 */
+.city-table { display: none; } /* 初始隱藏所有城市表格 */
+button { margin: 5px; padding: 8px 12px; cursor: pointer; }
 </style>
 </head>
 <body>
-<h2 style="text-align: center;">10/7 京都行程</h2>
 
+<h2 style="text-align:center;">行程表</h2>
+
+<!-- 城市選擇按鈕 -->
+<div style="text-align:center; margin-bottom:20px;">
+    
+    <button onclick="showCity('osaka')">10/4 大阪</button>
+	<button onclick="showCity('osaka')">10/5 大阪(day2)</button>
+	<button onclick="showCity('nara')">10/6 奈良,宇治</button>
+	<button onclick="showCity('kyoto')">10/7 京都</button>
+    
+</div>
+
+<!-- 京都行程表 -->
+<div id="kyoto" class="city-table">
+    <h3 style="text-align: center;">10/7 京都行程</h3>
 <table>
     <thead>
         <tr>
@@ -130,5 +141,46 @@
         </tr>
     </tbody>
 </table>
+</div>
+
+<!-- 大阪行程表 -->
+<div id="osaka" class="city-table">
+    <h3 style="text-align:center;">10/4-5 大阪行程</h3>
+    <table>
+        <thead>
+            <tr><th>時間</th><th>行程</th><th>備註</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>8:00</td><td>出發搭車到大阪站</td><td>約40分</td></tr>
+            <tr><td>9:00</td><td>大阪城公園</td><td></td></tr>
+            <!-- 其他大阪行程 -->
+        </tbody>
+    </table>
+</div>
+
+<!-- 奈良行程表 -->
+<div id="nara" class="city-table">
+    <h3 style="text-align:center;">10/6 奈良行程</h3>
+    <table>
+        <thead>
+            <tr><th>時間</th><th>行程</th><th>備註</th></tr>
+        </thead>
+        <tbody>
+            <tr><td>8:00</td><td>出發搭車到奈良站</td><td>約50分</td></tr>
+            <tr><td>9:00</td><td>奈良公園</td><td>餵鹿</td></tr>
+            <!-- 其他奈良行程 -->
+        </tbody>
+    </table>
+</div>
+
+<script>
+function showCity(city) {
+    document.querySelectorAll('.city-table').forEach(t => t.style.display='none');
+    document.getElementById(city).style.display='block';
+}
+// 預設顯示京都行程
+showCity('kyoto');
+</script>
+
 </body>
 </html>
