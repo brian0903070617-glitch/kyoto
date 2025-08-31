@@ -20,10 +20,10 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
 <!-- 城市選擇按鈕 -->
 <div style="text-align:center; margin-bottom:20px;">
     
-    <button onclick="showCity('osaka1')">10/4 大阪</button>
-	<button onclick="showCity('osaka2')">10/5 大阪(day2)</button>
-	<button onclick="showCity('nara')">10/6 奈良,宇治</button>
-	<button onclick="showCity('kyoto')">10/7 京都</button>
+    <button onclick="showCity('osaka1')">10/4 (五) 大阪</button>
+	<button onclick="showCity('osaka2')">10/5 (六) 大阪</button>
+	<button onclick="showCity('nara')">10/6 (日) 奈良,宇治</button>
+	<button onclick="showCity('kyoto')">10/7 (一) 京都</button>
     
 </div>
 
@@ -133,9 +133,78 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
             <tr><th>時間</th><th>行程</th><th>備註</th></tr>
         </thead>
         <tbody>
-            <tr><td>8:00</td><td>出發搭車到奈良站</td><td>約50分</td></tr>
-            <tr><td>9:00</td><td>奈良公園</td><td>餵鹿</td></tr>
-            <!-- 其他奈良行程 -->
+		
+           <!-- 景點 -->
+    <tr>
+      <td>10:00 - 18:00 (週四休)</td>
+      <td><a href="https://maps.app.goo.gl/wncsZUTdq3chFsHU7" target="_blank">奈良飛車（生駒山上遊園地）</a></td>
+      <td>本身不需門票，各項遊樂設施單獨收費</td>
+    </tr>
+    <tr>
+      <td>07:30 - 15:30</td>
+      <td><a href="https://maps.app.goo.gl/9uRQuEFqiyGscNfV9" target="_blank">東大寺</a></td>
+      <td>門票 ¥600/人，鹿偏兇</td>
+    </tr>
+    <tr>
+      <td>全天</td>
+      <td><a href="https://maps.app.goo.gl/jBZaev2fJgyFLuT87" target="_blank">奈良公園</a></td>
+      <td>門票免費</td>
+    </tr>
+    <tr>
+      <td>下午 17:00 後</td>
+      <td><a href="https://neonara.net/tw/wakakusa-mountain/#index_id7" target="_blank">若草山</a></td>
+     
+	  <td>150日圓，只能現金，步行1小時。
+			<a href="https://neonara.net/tw/wakakusa-mountain/#index_id7" target="_blank">筆記攻略</a>
+	  </td>
+    </tr>
+    <tr>
+      <td>06:00 - 18:00</td>
+      <td><a href="https://maps.app.goo.gl/3phctmktpJgYoNVC8" target="_blank">春日大社</a></td>
+      <td>門票 ¥500/人，附近鹿比較溫馴</td>
+    </tr>
+
+    <!-- 餐廳 -->
+    <tr>
+      <td>09:00 - 19:00</td>
+      <td><a href="https://maps.app.goo.gl/PnhitDbzmbaLm9aZA" target="_blank">柿叶寿司本铺たなか</a></td>
+      <td>從近鐵奈良線「近鐵奈良」站步行1分鐘</td>
+    </tr>
+    <tr>
+      <td>11:00 – 21:00</td>
+      <td><a href="https://maps.app.goo.gl/4yQt6LdaoyeL1K3s7" target="_blank">とんかつ がんこ 奈良店。頑固豬排</a></td>
+      <td>從近鉄奈良站2號出口走過來不用3分鐘</td>
+    </tr>
+    <tr>
+      <td>11:00 - 14:30</td>
+      <td><a href="https://maps.app.goo.gl/ATTu43KM5CW4dkRE6" target="_blank">蕎麥麵 喜多原</a></td>
+      <td>週二休<br>
+	  蕎麥麵和天婦羅很厲害</td>
+    </tr>
+    <tr>
+      <td>11:00 - 14:00</td>
+      <td><a href="https://maps.app.goo.gl/uQMjUcgWD494EKyp8" target="_blank">うな好 (宇治老爺爺鰻魚飯)</a></td>
+      <td>週三、四休</td>
+    </tr>
+
+    <!-- 咖啡廳 -->
+    <tr>
+      <td>10:00 - 19:00</td>
+      <td><a href="https://maps.app.goo.gl/EEixeSELBU79NcvF7" target="_blank">Daisy</a></td>
+      <td>週四休</td>
+    </tr>
+    <tr>
+      <td></td>
+      <td><a href="https://maps.app.goo.gl/RTaU7CCKeNpKfuPTA" target="_blank">たかばたけ茶論｜Takabatake Salon</a></td>
+      <td>14:00～18:00 (周五·六·日·節假日)<br>
+	  近奈良公園，步行可達春日大社/東大寺</td>
+    </tr>
+
+    <!-- 票券 -->
+    <tr>
+      <td>---</td>
+      <td>交通：主要買好西瓜卡就好</td>
+      <td></td>
         </tbody>
     </table>
 </div>
@@ -280,10 +349,10 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
 <!-- 城市選擇按鈕 -->
 <div style="text-align:center; margin-bottom:20px;">
     
-    <button onclick="showCity('osaka1')">10/4 大阪</button>
-	<button onclick="showCity('osaka2')">10/5 大阪(day2)</button>
-	<button onclick="showCity('nara')">10/6 奈良,宇治</button>
-	<button onclick="showCity('kyoto')">10/7 京都</button>
+     <button onclick="showCity('osaka1')">10/4 (五) 大阪</button>
+	 <button onclick="showCity('osaka2')">10/5 (六) 大阪</button>
+	 <button onclick="showCity('nara')">10/6 (日) 奈良,宇治</button>
+	 <button onclick="showCity('kyoto')">10/7 (一) 京都</button>
     
 </div>
 
