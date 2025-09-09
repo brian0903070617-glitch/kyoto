@@ -28,9 +28,9 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
 </div>
 
 <div style="text-align:center; margin-bottom:20px;">
-    <button onclick="openMyApp()" style="padding:10px 20px; font-size:16px;">
-        開啟行程 App
-    </button>
+    <button onclick="window.open('https://www.klook.com/zh-TW/bookings/?spm=Activity.TopNavigation.Booking&clickId=33db267d2f', '_blank')">
+		打開 Klook 活動
+	</button>
 </div>
 
 <!-- 大阪day1行程表 -->
@@ -416,25 +416,6 @@ function showCity(city) {
 }
 // 預設顯示大阪day1行程
 showCity('osaka1');
-
-function openKlook() {
-    const iosScheme = "klook://";
-    const androidScheme = "intent://#Intent;scheme=klook;package=com.klook;end";
-    const appStoreURL = "https://apps.apple.com/tw/app/klook/id957962992";
-    const playStoreURL = "https://play.google.com/store/apps/details?id=com.klook";
-
-    const ua = navigator.userAgent || navigator.vendor || window.opera;
-
-    if (/android/i.test(ua)) {
-        window.location.href = androidScheme;
-        setTimeout(() => { window.location.href = playStoreURL; }, 2000);
-    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
-        window.location = iosScheme;
-        setTimeout(() => { window.location.href = appStoreURL; }, 2000);
-    } else {
-        alert("請在手機上開啟此頁面");
-    }
-}
 </script>
 
 </body>
