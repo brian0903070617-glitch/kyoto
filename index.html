@@ -12,11 +12,38 @@ a { text-decoration: none; color: #007acc; font-weight: bold; } /* 超連結紅�
 .city-table { display: none; } /* 初始隱藏所有城市表格 */
 button { margin: 5px; padding: 8px 12px; cursor: pointer; background: #ff8c66; border: none; border-radius: 6px; color: white; font-weight: bold; transition: background 0.3s; }
 button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 150px; /* 高度依圖片大小調整 */
+    margin-bottom: 20px;
+}
+
+.marquee img {
+    position: absolute;
+    top: 0;
+    width: 220px;      /* 圖片寬度 */
+    height: 150px;     /* 圖片高度 */
+    animation: slideLeft 5s linear infinite;
+}
+
+@keyframes slideLeft {
+    0% { right: -150px; }
+    100% { right: 100%; }
+}
+
+
 </style>
 </head>
-<body>
 
+<body>
 <h2 style="text-align:center;">關子嶺出草流程</h2>
+
+<div class="marquee">
+    <img src="https://i.ibb.co/wZssmZfC/car.png" alt="我的圖片">
+</div>
 
 <!-- 城市選擇按鈕 -->
 <div style="text-align:center; margin-bottom:20px;">
@@ -411,6 +438,7 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 </div>
 
 <script>
+
 function showCity(city) {
     document.querySelectorAll('.city-table').forEach(t => t.style.display='none');
     document.getElementById(city).style.display='block';
