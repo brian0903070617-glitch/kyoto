@@ -27,6 +27,7 @@ button { margin: 5px; padding: 8px 12px; cursor: pointer; }
     
 </div>
 
+<!-- KLOOK按鈕 -->
 <div style="text-align:center; margin-bottom:20px;">
     <button onclick="window.open('https://www.klook.com/zh-TW/bookings/?spm=Activity.TopNavigation.Booking&clickId=33db267d2f', '_blank')">
 		打開 Klook 活動
@@ -414,8 +415,35 @@ function showCity(city) {
     document.querySelectorAll('.city-table').forEach(t => t.style.display='none');
     document.getElementById(city).style.display='block';
 }
-// 預設顯示大阪day1行程
-showCity('osaka1');
+
+// 根據今天日期自動預設顯示
+function showCityByDate() {
+    const today = new Date(); // 取得今天日期
+    const month = today.getMonth() + 1; // 月份 (0~11)
+    const day = today.getDate();
+
+    // 日期對應的城市ID
+    const dateMap = {
+        '10-4': 'osaka1',
+        '10-5': 'osaka2',
+        '10-6': 'nara',
+        '10-7': 'kyoto'
+    };
+
+    const key = `${month}-${day}`;
+    let cityId = dateMap[key];
+
+    // 如果沒有對應日期，顯示第一個行程（第一個按鈕對應的城市ID）
+    if (!cityId) {
+        const firstButton = document.querySelector('button');
+        cityId = firstButton ? firstButton.getAttribute('onclick').match(/'(.+)'/)[1] : 'osaka1';
+    }
+
+    showCity(cityId);
+}
+
+// 自動執行
+showCityByDate();
 </script>
 
 </body>
