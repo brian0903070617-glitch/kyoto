@@ -57,37 +57,40 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
   }
 
   /* 手機優化 */
-  @media (max-width: 600px) {
-    .schedule-table thead {
-      display: none; /* 手機隱藏表頭 */
-    }
-    .schedule-table, 
-    .schedule-table tbody, 
-    .schedule-table tr, 
-    .schedule-table td {
-      display: block;
-      width: 100%;
-    }
-    .schedule-table tr {
-      margin-bottom: 15px;
-      border: 1px solid #000;
-      padding: 10px;
-      border-radius: 8px;
-      background: #fafafa;
-    }
-    .schedule-table td {
-      text-align: left;
-      border: none;
-      padding: 5px 0;
-    }
-    .schedule-table td:before {
-      content: attr(data-label);
-      font-weight: bold;
-      display: block;
-      margin-bottom: 4px;
-      color: #333;
-    }
+@media (max-width: 600px) {
+  .schedule-table thead {
+    display: none; /* 手機隱藏表頭 */
   }
+  .schedule-table, 
+  .schedule-table tbody, 
+  .schedule-table tr, 
+  .schedule-table td {
+    display: block;
+    width: 100%;
+    max-width: 360px;  /* 限制卡片最大寬度 */
+    margin: 0 auto;    /* 水平置中 */
+  }
+  .schedule-table tr {
+    margin-bottom: 15px;
+    border: 2px solid #000; /* 粗黑線 */
+    padding: 10px;
+    border-radius: 8px;
+    background: #fafafa;
+  }
+  .schedule-table td {
+    text-align: left;
+    border: none;
+    padding: 5px 0;
+  }
+  .schedule-table td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 4px;
+    color: #333;
+  }
+}
+
 
 </style>
 </head>
