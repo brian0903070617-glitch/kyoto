@@ -34,61 +34,36 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
     100% { right: 100%; }
 }
 
-  .schedule-table {
+.schedule-table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed; /* 讓欄位等寬 */
-	border: 1px solid #000; /* 整個表格外框粗黑線 */
-  }
-  .schedule-table th, 
-  .schedule-table td {
+    border: 1px solid #000; /* 整個表格外框粗黑線 */
+}
+.schedule-table th, 
+.schedule-table td {
     border: 1px solid #000; /* 每格粗黑線 */
     padding: 8px;
     text-align: center;
     word-wrap: break-word;
     white-space: normal; /* 允許換行 */
-  }
-  .schedule-table td div {
+}
+.schedule-table td div {
     padding: 4px 0;
     border-bottom: 1px solid #000;
-  }
-  .schedule-table td div:last-child {
+}
+.schedule-table td div:last-child {
     border-bottom: none; /* 最後一個不要底線 */
-  }
+}
 
-  /* 手機優化 */
+/* 手機優化：保持橫向排列，表格可滑動 */
 @media (max-width: 600px) {
-  .schedule-table thead {
-    display: none; /* 手機隱藏表頭 */
-  }
-  .schedule-table, 
-  .schedule-table tbody, 
-  .schedule-table tr, 
-  .schedule-table td {
-    display: block;
-    width: 100%;
-    max-width: 360px;  /* 限制卡片最大寬度 */
-    margin: 0 auto;    /* 水平置中 */
-  }
-  .schedule-table tr {
-    margin-bottom: 15px;
-    border: 2px solid #000; /* 粗黑線 */
-    padding: 10px;
-    border-radius: 8px;
-    background: #fafafa;
-  }
-  .schedule-table td {
-    text-align: left;
-    border: none;
-    padding: 5px 0;
-  }
-  .schedule-table td:before {
-    content: attr(data-label);
-    font-weight: bold;
-    display: block;
-    margin-bottom: 4px;
-    color: #333;
-  }
+    .schedule-container {
+        overflow-x: auto; /* 手機可以左右滑動 */
+    }
+    .schedule-table {
+        min-width: 600px; /* 表格最小寬度，避免欄位被擠扁 */
+    }
 }
 
 
