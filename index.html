@@ -59,10 +59,14 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 /* 手機優化：保持橫向排列，表格可滑動 */
 @media (max-width: 1000px) {
     .schedule-container {
-        overflow-x: auto; /* 手機可以左右滑動 */
+        overflow-x: hidden; /* 手機可以左右滑動 */
+		width: 100%;
+		transform: scale(0.7); /* 縮小 70% */
+        transform-origin: top left; /* 從左上角縮放 */
     }
     .schedule-table {
-        min-width: 1000px; /* 表格最小寬度，避免欄位被擠扁 */
+        width: 100%;
+	<!--	min-width: 1000px; /* 表格最小寬度，避免欄位被擠扁 */  -->
     }
 }
 
