@@ -59,11 +59,12 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 /* 手機優化：保持橫向排列，表格可滑動 */
 @media (max-width: 1000px) {
     .schedule-container {
-        overflow-x: auto; /* 手機可以左右滑動 */
+        overflow-x: hidden;  /* 不需要滑動 */
+        transform: scale(0.8); 
+        transform-origin: top left;
     }
     .schedule-table {
-	
-        min-width: 1000px; /* 表格最小寬度，避免欄位被擠扁 */
+        min-width: 1000px; /* 保持欄位比例 */
     }
 }
 
@@ -531,5 +532,3 @@ showCityByDate();
 
 </body>
 </html>
-
-
