@@ -57,12 +57,20 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 }
 
 /* 手機優化：保持橫向排列，表格可滑動 */
-@media (max-width: 1000px) {
-    .schedule-container {
-        overflow-x: auto; /* 手機可以左右滑動 */
+@media (max-width: 600px) {
+    body {
+        font-size: 12px; /* 手機版整體字體縮小 */
     }
-    .schedule-table {
-        min-width: 1000px; /* 表格最小寬度，避免欄位被擠扁 */
+
+    .schedule-table th, 
+    .schedule-table td {
+        padding: 4px; /* 調整格內間距 */
+        font-size: 10px; /* 表格內文字縮小 */
+    }
+
+    table {
+        table-layout: auto; /* 表格自動分配欄寬 */
+        width: 100%; /* 保持表格完整顯示 */
     }
 }
 
