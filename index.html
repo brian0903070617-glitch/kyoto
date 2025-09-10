@@ -58,14 +58,12 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 
 /* 手機優化：保持橫向排列，表格可滑動 */
 @media (max-width: 1000px) {
-    body {
-        font-size: 12px; /* 手機版整體字體縮小 */
-    }
-
+   
     .schedule-table th, 
     .schedule-table td {
-        padding: 4px; /* 調整格內間距 */
-        font-size: 10px; /* 表格內文字縮小 */
+	    text-align: center;       /* 水平置中 */
+		vertical-align: middle;   /* 垂直置中 */
+        padding: 4px; 			  /* 調整格內間距 */
     }
 
     table {
