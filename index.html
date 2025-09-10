@@ -56,19 +56,6 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
     border-bottom: none; /* 最後一個不要底線 */
 }
 
-/* 手機優化：保持橫向排列，表格可滑動 */
-@media (max-width: 1000px) {
-	.schedule-container {
-		width: 100vw;             /* 容器寬度等於螢幕 */
-		height: auto;
-		overflow-x: hidden;        /* 隱藏橫向超出 */
-		zoom: 0.5; /* 整體縮小 */
-	}
-
-	.schedule-table {
-		min-width: 1000px;         /* 保留原本完整寬度 */
-	}
-}
 
 
 </style>
@@ -99,7 +86,7 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 </div>
 
 <!-- 大阪day1行程表 -->
-<div id="osaka1" class="city-table" style="overflow-x:auto;">
+<div id="osaka1" class="city-table" >
     <h3 style="text-align:center;">10/4 大阪夏之陣 (屠殺振煌錢包)</h3>
     <table class="schedule-table">
         <thead>
@@ -156,7 +143,7 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 </div>
 
 <!-- 大阪day2行程表 -->
-<div id="osaka2" class="city-table" style="overflow-x:auto;">
+<div id="osaka2" class="city-table">
     <h3 style="text-align:center;">10/5 大阪東之陣 吃到頭破血流</h3>
     <table class="schedule-table">
         <thead>
@@ -196,7 +183,7 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 </div>
 
 <!-- 奈良一日遊（經東大阪）行程表 -->
-<div id="nara" class="city-table" style="overflow-x:auto;">
+<div id="nara" class="city-table">
     <h3 style="text-align:center;">10/6 奈良野鹿騎士來囉!!</h3>
     <table class="schedule-table">
         <thead>
@@ -348,7 +335,7 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 </div>
 
 <!-- 京都行程表 -->
-<div id="kyoto" class="city-table" style="overflow-x:auto;">
+<div id="kyoto" class="city-table">
 	<h3 style="text-align: center;">10/7 金嘟嘟 成為我的夥伴吧</h3>
 <table class="schedule-table">
 	<thead>
