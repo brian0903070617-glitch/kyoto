@@ -58,14 +58,17 @@ button:hover { background: #ff704d; /* 滑鼠懸停顏色更亮 */ }
 
 /* 手機優化：保持橫向排列，表格可滑動 */
 @media (max-width: 1000px) {
-    .schedule-container {
-        overflow-x: hidden;  /* 不需要滑動 */
-        transform: scale(0.2); 
-        transform-origin: center center;
-    }
-    .schedule-table {
-        min-width: 1000px; /* 保持欄位比例 */
-    }
+	.schedule-container {
+		width: 100vw;             /* 容器寬度等於螢幕 */
+		height: auto;
+		overflow-x: hidden;        /* 隱藏橫向超出 */
+		transform: scale(0.5);     /* 縮小比例，自行調整 */
+		transform-origin: top center; /* 從上方置中縮放 */
+	}
+
+	.schedule-table {
+		min-width: 1000px;         /* 保留原本完整寬度 */
+	}
 }
 
 
